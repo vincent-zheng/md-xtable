@@ -3,7 +3,7 @@
   "name": "MD-XTable",
   "version": "1.0.0",
   "minAppVersion": "1.5.0",
-  "description": "Obsidian plugin to parse, render, and evaluate MD-XTable with cell merges, custom width, and formula calculations.",
+  "description": "plugin to parse, render, and evaluate MD-XTable with cell merges, custom width, and formula calculations.",
   "author": "Vincent Zheng",
   "authorUrl": "https://github.com/vincent-zheng",
   "isDesktopOnly": false
