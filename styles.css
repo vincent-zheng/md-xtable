@@ -1,8 +1,16 @@
 /* Highlight formula-calculated cells with accent line and secondary background */
+.markdown-rendered table.md-xtable td.md-xtable-formula,
+.markdown-rendered table.md-xtable th.md-xtable-formula,
+.markdown-source-view table.md-xtable td.md-xtable-formula,
+.markdown-source-view table.md-xtable th.md-xtable-formula,
+table.md-xtable td.md-xtable-formula,
+table.md-xtable th.md-xtable-formula {
+  border-bottom: 1.5px dotted var(--interactive-accent);
+}
+
 .md-xtable-formula {
   position: relative;
   background-color: rgba(var(--interactive-accent-rgb), 0.05);
-  border-bottom: 1.5px dotted var(--interactive-accent) !important;
 }
 
 /* Tooltip on hover showing formula content */
@@ -25,28 +33,40 @@
 }
 
 /* Helper styles for local customization metadata */
-.md-xtable.nowrap td,
-.md-xtable.nowrap th {
-  white-space: nowrap !important;
+.markdown-rendered table.md-xtable.nowrap td,
+.markdown-rendered table.md-xtable.nowrap th,
+.markdown-source-view table.md-xtable.nowrap td,
+.markdown-source-view table.md-xtable.nowrap th,
+table.md-xtable.nowrap td,
+table.md-xtable.nowrap th {
+  white-space: nowrap;
 }
 
-.md-xtable.striped tbody tr:nth-child(even) {
-  background-color: var(--background-secondary) !important;
+.markdown-rendered table.md-xtable.striped tbody tr:nth-child(even),
+.markdown-source-view table.md-xtable.striped tbody tr:nth-child(even),
+table.md-xtable.striped tbody tr:nth-child(even) {
+  background-color: var(--background-secondary);
 }
 
-.md-xtable.fixed-layout {
-  table-layout: fixed !important;
+.markdown-rendered table.md-xtable.fixed-layout,
+.markdown-source-view table.md-xtable.fixed-layout,
+table.md-xtable.fixed-layout {
+  table-layout: fixed;
 }
 
 /* Table Alignments */
-.md-xtable.align-center {
-  margin-left: auto !important;
-  margin-right: auto !important;
+.markdown-rendered table.md-xtable.align-center,
+.markdown-source-view table.md-xtable.align-center,
+table.md-xtable.align-center {
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.md-xtable.align-right {
-  margin-left: auto !important;
-  margin-right: 0 !important;
+.markdown-rendered table.md-xtable.align-right,
+.markdown-source-view table.md-xtable.align-right,
+table.md-xtable.align-right {
+  margin-left: auto;
+  margin-right: 0;
 }
 
 /* Wrapper Alignments for Live Preview and Reading Mode Scroll Wrappers */
@@ -63,13 +83,18 @@
 }
 
 /* Edit Button Styles for Live Preview */
+.markdown-source-view div.md-xtable-preview-wrapper,
+.markdown-rendered div.md-xtable-preview-wrapper,
+div.md-xtable-preview-wrapper {
+  font-size: var(--font-body-size, 14px);
+  color: var(--text-normal);
+  line-height: var(--line-height-normal);
+}
+
 .md-xtable-preview-wrapper {
   position: relative;
   display: block;
   width: 100%;
-  font-size: var(--font-body-size, 14px) !important;
-  color: var(--text-normal) !important;
-  line-height: var(--line-height-normal) !important;
 }
 
 .md-xtable-edit-btn {
